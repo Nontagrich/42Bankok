@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&family=Itim&family=Kanit:wght@800&family=Prompt&family=Rubik+Marker+Hatch&display=swap');
+body{
+    font-family: 'DynaPuff', cursive;
+}
+.pic1{
+    text-align: center;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+    
+}
+.low{
+    opacity: 50%;
+}
+.box{
+    border: solid 1px white;
+    background-color: white;
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn{
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+    width: 89%;
+    padding: 5%;
+    font-family: 'DynaPuff', cursive;
+    font-size: 140%;
+    
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color:rgb(232, 149, 0);
+    border: solid 1px rgb(232, 149, 0);
+    transition: .4s ease;
+}
+.btn:hover a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

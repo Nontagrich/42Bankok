@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <style>
+        .content{
+            margin-top: 10%;
+        }
+        .sign{
+            margin-right: 0.5%;
+            width: 15%;
+            font-size: 140%;
+            text-align: center;
+        }
+        .box1{
+            width: 15%;
+            font-size: 140%;
+            text-align: center;
+        }
+        .box2{
+            width: 15%;
+            font-size: 140%;
+            text-align: center;
+        }
+        .enter{
+            width: 15%;
+            font-size: 140%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="content">
+            <input type="text" id="a" class="box1">
+            <select name="sign" id="sign" class="sign">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            
+            <input type="text" id="b" class="box2">
+        </select>
+        <br><br>
+        <button type="submit" class="enter" onclick="sol();">Try me!</button>
+        </div>
+        
+    </center>
+
+    <script>
+        function sol(event){
+            let num1 = document.getElementById("a").value;
+            let num2 = document.getElementById("b").value;
+            let sign = document.getElementById("sign").value;
+
+
+            if(num1.match(/^[a-z][a-z0-9]+$/) || num2.match(/^[a-z][a-z0-9]+$/)) {
+                alert("Error :(");
+                console.log("Error :(")
+            }else if(num1 < 0 || num2 < 0){
+                alert("Error :(");
+                console.log("Error :(")
+            }else if(num2 == 0 && (sign == "/" || sign == "%")){
+                alert("It's over 9000!")
+                console.log("It's over 9000!")
+            }else {
+                num1 = parseInt(num1)
+                num2 = parseInt(num2)
+                if(sign == "+"){
+                    alert(num1+num2)
+                    console.log(num1+num2)
+                }else if(sign == "-"){
+                    alert(num1-num2)
+                    console.log(num1-num2)
+                }
+                else if(sign == "*"){
+                    alert(num1*num2)
+                    console.log(num1*num2)
+                }
+                else if(sign == "/"){
+                    alert(num1/num2)
+                    console.log(num1/num2)
+                }
+                else if(sign == "%"){
+                    alert(num1%num2)
+                    console.log(num1%num2)
+                }
+            }
+        }
+    
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+    </script>
+    
+</body>
+</html>

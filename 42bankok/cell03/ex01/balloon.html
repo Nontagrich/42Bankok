@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        .ball{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100%;
+            margin-top: 15%;
+        }
+    </style>
+</head>
+<body>
+    <center><div class="ball" id="Balloon"></div></center>
+    
+
+    <script>
+        let ball = document.getElementById("Balloon")
+
+        function change1(event){
+            if(ball.style.backgroundColor == "red") {
+                ball.style.backgroundColor = "green" ;
+            }
+            
+            else if (ball.style.backgroundColor == "green") {
+                ball.style.backgroundColor = "blue" ;
+            }
+            
+            else {
+                ball.style.backgroundColor = "red" ; 
+            }
+        }
+    
+        function sizeplus(event){
+            if(ball.style.height >= "420px"){
+                ball.style.width = "200px";
+                ball.style.height = "200px";
+        }else {
+            ball.style.width = (ball.offsetWidth + 10) + "px";
+            ball.style.height = (ball.offsetHeight + 10) + "px";
+        }
+        change1(event);
+    }
+        function sizemin(event){
+            if(ball.style.height <= "200px"){
+                ball.style.width = "200px";
+                ball.style.height = "200px";
+        }else {
+            ball.style.width = (ball.offsetWidth - 5) + "px";
+            ball.style.height = (ball.offsetHeight - 5) + "px";
+        }
+        change2(event);
+    }
+        function change2(event){
+            if(ball.style.backgroundColor == "red") {
+                ball.style.backgroundColor = "blue" ;
+            }
+            
+            else if (ball.style.backgroundColor == "blue") {
+                ball.style.backgroundColor = "green" ;
+            }
+            
+            else {
+                ball.style.backgroundColor = "red" ; 
+            }
+        }
+
+
+        ball.onclick = sizeplus;
+        ball.onmouseout = sizemin;
+        
+       
+    </script>
+   
+</body>
+</html>
